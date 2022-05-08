@@ -22,7 +22,7 @@ public final class AutoFarmCommand
                 .withArguments(new MultiLiteralArgument("cactus"))
                 .executesPlayer((player, args) -> {
                     final String farmtype = (String) args[0];
-                    
+
                     if (plugin.getManager().hasCooldown(player.getLocation()))
                     {
                         throw CommandAPI.fail("This farm is in cooldown");

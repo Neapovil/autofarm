@@ -28,7 +28,13 @@ public final class CheckChunkRunnable extends BukkitRunnable
     {
         if (this.farmType.equalsIgnoreCase("cactus"))
         {
+            if (!this.chunkSnapshot.contains(Material.CACTUS.createBlockData()))
+            {
+                return;
+            }
+
             this.cactusFarm();
+
             return;
         }
     }
