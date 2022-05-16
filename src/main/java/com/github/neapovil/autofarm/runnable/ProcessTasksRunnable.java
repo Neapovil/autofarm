@@ -30,7 +30,7 @@ public final class ProcessTasksRunnable extends BukkitRunnable
 
         if (task == null)
         {
-            task = plugin.getManager().getQueue().runTaskLaterAsynchronously(plugin, 20);
+            task = plugin.getManager().getQueue().runTaskAsynchronously(plugin);
         }
     }
 }

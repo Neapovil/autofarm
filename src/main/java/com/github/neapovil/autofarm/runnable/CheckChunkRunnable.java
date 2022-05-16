@@ -43,9 +43,9 @@ public final class CheckChunkRunnable extends BukkitRunnable
     {
         final List<Location> locations = new it.unimi.dsi.fastutil.objects.ObjectArrayList<>();
 
-        for (int x = 0; x < 15; x++)
+        for (int x = 0; x <= 15; x++)
         {
-            for (int z = 0; z < 15; z++)
+            for (int z = 0; z <= 15; z++)
             {
                 final Material material = this.chunkSnapshot.getBlockType(x, this.location.getBlockY(), z);
 
@@ -59,11 +59,9 @@ public final class CheckChunkRunnable extends BukkitRunnable
             }
         }
 
-        if (locations.isEmpty())
+        if (!locations.isEmpty())
         {
-            return;
+            new FarmChunkRunnable(locations).runTask(plugin);
         }
-
-        new FarmChunkRunnable(locations).runTaskLater(plugin, 20);
     }
 }
