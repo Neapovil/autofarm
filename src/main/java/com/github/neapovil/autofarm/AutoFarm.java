@@ -35,7 +35,7 @@ public final class AutoFarm extends JavaPlugin
         this.manager = new Manager();
 
         new ProcessTasksRunnable().runTaskTimerAsynchronously(this, 0, 0);
-        
+
         AutoFarmCommand.register();
     }
 

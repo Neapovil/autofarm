@@ -19,7 +19,7 @@ public final class AutoFarmCommand
         new CommandAPICommand("autofarm")
                 .withPermission("autofarm.command.user")
                 .withArguments(new LiteralArgument("break"))
-                .withArguments(new MultiLiteralArgument("cactus"))
+                .withArguments(new MultiLiteralArgument("cactus", "wheat"))
                 .executesPlayer((player, args) -> {
                     final String farmtype = (String) args[0];
 
